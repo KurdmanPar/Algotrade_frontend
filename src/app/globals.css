@@ -1,52 +1,74 @@
 @import "tailwindcss";
 
-/* This is the new way to define custom colors in Tailwind v4 */
+/* --- پالت رنگی جدید و حرفه‌ای --- */
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-  --color-card: #ffffff;
-  --color-card-foreground: #171717;
-  --color-popover: #ffffff;
-  --color-popover-foreground: #171717;
-  --color-primary: #171717;
-  --color-primary-foreground: #fafafa;
-  --color-secondary: #f5f5f5;
-  --color-secondary-foreground: #171717;
-  --color-muted: #f5f5f5;
-  --color-muted-foreground: #737373;
-  --color-accent: #f5f5f5;
-  --color-accent-foreground: #171717;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #fafafa;
-  --color-border: #e5e5e5;
-  --color-input: #e5e5e5;
-  --color-ring: #171717;
+  /* --- Light Theme (حالت روز) --- */
+  --color-background: #f8fafc;      /* آبی بسیار روشن و نرم */
+  --color-foreground: #1e293b;      /* خاکستری تیره برای متن‌ها */
+  --color-card: #ffffff;             /* سفید خالص برای کارت‌ها */
+  --color-card-foreground: #0f172a; /* خاکستری خیلی تیره برای متن روی کارت‌ها */
+  --color-popover: #ffffff;          /* پس‌زمینه منوهای کشویی */
+  --color-popover-foreground: #0f172a;
+  --color-primary: #0f172a;         /* رنگ اصلی دکمه‌ها و لینک‌ها */
+  --color-primary-foreground: #f8fafc;
+  --color-secondary: #f1f5f9;       /* خاکستری بسیار روشن */
+  --color-secondary-foreground: #475569;
+  --color-muted: #f1f5f9;         /* برای عناصر غیرفعال یا کم‌اهمیت */
+  --color-muted-foreground: #64748b;
+  --color-accent: #e2e8f0;         /* برای هاور و حالت‌های فعال */
+  --color-accent-foreground: #0f172a;
+  --color-destructive: #ef4444;     /* قرمز استاندارد برای هشدار */
+  --color-destructive-foreground: #f8fafc;
+  --color-border: #e2e8f0;         /* حاشیه‌های نرم */
+  --color-input: #e2e8f0;
+  --color-ring: #94a3b8;           /* حلقه فوکوس */
+
+  /* --- Dark Theme (حالت شب) --- */
+  --dark-color-background: #0f172a;      /* خاکستری تیره و عمیق */
+  --dark-color-foreground: #f8fafc;      /* متن‌های روشن */
+  --dark-color-card: #1e293b;             /* کارت‌های کمی روشن‌تر از پس‌زمینه */
+  --dark-color-card-foreground: #f8fafc;
+  --dark-color-popover: #1e293b;
+  --dark-color-popover-foreground: #f8fafc;
+  --dark-color-primary: #f8fafc;         /* دکمه‌های روشن */
+  --dark-color-primary-foreground: #0f172a;
+  --dark-color-secondary: #334155;       /* خاکستری متوسط */
+  --dark-color-secondary-foreground: #f8fafc;
+  --dark-color-muted: #334155;
+  --dark-color-muted-foreground: #94a3b8;
+  --dark-color-accent: #475569;
+  --dark-color-accent-foreground: #f8fafc;
+  --dark-color-destructive: #f87171;     /* قرمز ملایم‌تر در حالت شب */
+  --dark-color-destructive-foreground: #0f172a;
+  --dark-color-border: #334155;
+  --dark-color-input: #334155;
+  --dark-color-ring: #94a3b8;
 }
 
-/* Base styles for the body */
+/* --- استایل‌های پایه --- */
 body {
   @apply bg-background text-foreground;
 }
 
-/* Dark mode styles, toggled by adding a 'dark' class to the <html> tag */
+/* --- اعمال رنگ‌های حالت شب --- */
 .dark {
-  --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-card: #0a0a0a;
-  --color-card-foreground: #fafafa;
-  --color-popover: #0a0a0a;
-  --color-popover-foreground: #fafafa;
-  --color-primary: #fafafa;
-  --color-primary-foreground: #171717;
-  --color-secondary: #262626;
-  --color-secondary-foreground: #fafafa;
-  --color-muted: #262626;
-  --color-muted-foreground: #a3a3a3;
-  --color-accent: #262626;
-  --color-accent-foreground: #fafafa;
-  --color-destructive: #dc2626;
-  --color-destructive-foreground: #fafafa;
-  --color-border: #262626;
-  --color-input: #262626;
-  --color-ring: #d4d4d8;
+  --color-background: var(--dark-color-background);
+  --color-foreground: var(--dark-color-foreground);
+  --color-card: var(--dark-color-card);
+  --color-card-foreground: var(--dark-color-card-foreground);
+  --color-popover: var(--dark-color-popover);
+  --color-popover-foreground: var(--dark-color-popover-foreground);
+  --color-primary: var(--dark-color-primary);
+  --color-primary-foreground: var(--dark-color-primary-foreground);
+  --color-secondary: var(--dark-color-secondary);
+  --color-secondary-foreground: var(--dark-color-secondary-foreground);
+  --color-muted: var(--dark-color-muted);
+  --color-muted-foreground: var(--dark-color-muted-foreground);
+  --color-accent: var(--dark-color-accent);
+  --color-accent-foreground: var(--dark-color-accent-foreground);
+  --color-destructive: var(--dark-color-destructive);
+  --color-destructive-foreground: var(--dark-color-destructive-foreground);
+  --color-border: var(--dark-color-border);
+  --color-input: var(--dark-color-input);
+  --color-ring: var(--dark-color-ring);
 }
